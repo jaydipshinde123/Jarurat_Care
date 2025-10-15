@@ -25,21 +25,24 @@ const SplashScreen = ({ onComplete }) => {
       <div className="text-center space-y-8 px-6 w-full max-w-md">
         {/* Main Logo */}
         <div className="flex justify-center">
-          <div className="relative">
-            {/* Outer Ring */}
-            <div className="absolute inset-0 w-32 h-32 border-4 border-white/20 rounded-full animate-ping"></div>
-            {/* Icon Container */}
-            <div className="relative bg-white/10 backdrop-blur-lg p-6 rounded-2xl border border-white/20 shadow-2xl">
-              <Heart className="w-16 h-16 text-white transform transition-transform duration-1000 hover:scale-110" />
+          <div className="relative flex items-center justify-center">
+            {/* Animated Rings */}
+            <div className="absolute w-32 h-32 border-4 border-white/20 rounded-full animate-ping opacity-70"></div>
+            <div className="absolute w-32 h-32 border-2 border-white/15 rounded-full animate-pulse opacity-50"></div>
+            
+            {/* Logo Container */}
+            <div className="relative bg-white/10 backdrop-blur-xl p-4 rounded-2xl border border-white/25 shadow-2xl z-10 transform transition-all duration-500 hover:scale-105 hover:bg-white/15">
+              <img 
+                className="w-30 h-30 rounded-xl object-cover" 
+                src="https://media.licdn.com/dms/image/v2/D4D0BAQH4MOer1snVLA/company-logo_200_200/company-logo_200_200/0/1718213718443?e=1763596800&v=beta&t=zrdLZtOFPHZE3ezUlWHux4GYVsuNToUB6FluMRWzSTI" 
+                alt="Jarurat Care Logo" 
+              />
             </div>
           </div>
         </div>
 
         {/* Text Content - Perfectly Centered */}
         <div className="space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight">
-            Jarurat <span className="text-blue-200">Care</span>
-          </h1>
           <div className="flex items-center justify-center gap-2 text-white/80">
             <Activity className="w-5 h-5 animate-pulse" />
             <p className="text-lg font-light">Healthcare Management System</p>

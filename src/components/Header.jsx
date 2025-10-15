@@ -18,10 +18,13 @@ const Header = () => {
           {/* Logo */}
           <NavLink to="/" className="flex items-center gap-3 group">
             <div className="relative">
-              <div className="p-3 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl transition-all duration-300 group-hover:scale-105 shadow-lg">
-                <Heart className="w-6 h-6 text-white" />
+              <div className="p-1 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl transition-all duration-300 group-hover:scale-105 shadow-lg">
+                <img 
+                className="w-15 rounded-xl" 
+                src="https://media.licdn.com/dms/image/v2/D4D0BAQH4MOer1snVLA/company-logo_200_200/company-logo_200_200/0/1718213718443?e=1763596800&v=beta&t=zrdLZtOFPHZE3ezUlWHux4GYVsuNToUB6FluMRWzSTI" 
+                alt="Jarurat Care Logo" 
+              />
               </div>
-              <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white"></div>
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">

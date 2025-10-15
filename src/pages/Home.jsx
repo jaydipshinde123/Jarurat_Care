@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Heart, Users, Shield, Clock, ArrowRight, Star, Activity } from "lucide-react";
+import { Heart, Users, Shield, Clock, ArrowRight, Star, Activity, Target } from "lucide-react";
 import Footer from "../components/Footer";
 
 const Home = () => {
@@ -20,9 +20,12 @@ const Home = () => {
                 Jarurat Care
               </span>
             </h1>
+
+            <h1 className="text-2xl md:text-4xl font-bold text-white leading-tight">
+              Jaisi Jarurat Vaisi Care
+            </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-3xl mx-auto">
-              Modern patient records management system designed for healthcare professionals. 
-              Access patient information quickly, securely, and efficiently.
+              Providing support, guidance, hope and personalized care for cancer patients and their families. Here to ensure you never face your journey alone.
             </p>
             <div className="flex flex-wrap gap-4 justify-center pt-4">
               <Link to="/patients">
@@ -95,6 +98,76 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+
+      <section className="py-20 px-4 bg-white">
+      <div className="container mx-auto max-w-6xl">
+        {/* Header Section */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            What we do
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            We focus on delivering crucial support to patients, ensuring access to quality treatment, 
+            raising awareness, and advocating for better care. Our efforts aim to provide hope and 
+            drive positive change in the fight against cancer.
+          </p>
+        </div>
+
+        {/* Features Grid - Card Style */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+          {[
+            {
+              icon: Users,
+              title: "Provide Comprehensive Patient Support",
+              description: "Offering emotional, financial, and practical support to patients and their families throughout their cancer journey.",
+              bgColor: "bg-blue-50",
+              iconColor: "text-blue-600"
+            },
+            {
+              icon: Heart,
+              title: "Facilitate Access to Quality Care",
+              description: "Connecting patients with the best medical facilities, treatments, and healthcare professionals.",
+              bgColor: "bg-green-50",
+              iconColor: "text-green-600"
+            },
+            {
+              icon: Shield,
+              title: "Promote Awareness and Education",
+              description: "Conducting awareness campaigns and educational programs about cancer prevention and early detection.",
+              bgColor: "bg-purple-50",
+              iconColor: "text-purple-600"
+            },
+            {
+              icon: Target,
+              title: "Advocate for Better Cancer Care",
+              description: "Working with policymakers and healthcare institutions to improve cancer care standards and accessibility.",
+              bgColor: "bg-red-50",
+              iconColor: "text-red-600"
+            }
+          ].map((feature, index) => (
+            <div
+              key={index}
+              className="group bg-white rounded-2xl p-8 border-l-4 border-blue-500 shadow-md hover:shadow-xl transition-all duration-300"
+            >
+              <div className="flex items-start gap-4">
+                <div className={`p-3 rounded-xl ${feature.bgColor}`}>
+                  <feature.icon className={`w-6 h-6 ${feature.iconColor}`} />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
 
       {/* Footer */}
       <Footer />

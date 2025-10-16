@@ -1,7 +1,7 @@
 # 🏥 Jarurat Care - Patient Management System
 A modern, responsive healthcare management system built with React.js and Tailwind CSS to streamline patient records management for healthcare professionals.
 
-**Live Website:** [https:/jarurattcare.netlify.app]
+**Live Website:**  [https:/jarurattcare.netlify.app](https://your-actual-link-here)
 
 ## ✨ Features
 
